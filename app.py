@@ -238,7 +238,7 @@ if predecir_btn:
   # Punto 7(e): Traducir con el mismo orden de labels del StringIndexer
   idx_predicho = int(resultado["prediction"])
   clase_predicha = labels_orden[idx_predicho]
-  vector_prob = resultado["probability"].toArray()
+  vector_prob = resultado["probability"].toArray()[: len(labels_orden)]
 
   descripcion_clase = {
       "Graduate": "Graduate — Camino a Graduarse 🎓",
